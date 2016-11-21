@@ -1,0 +1,58 @@
+create database dbwebpa;
+go
+use  dbwebpa
+go
+create table usuario
+(
+id int not null primary key,
+nombre varchar(30) not null,
+direccion varchar(30) not null,
+telefono varchar(10) not null,
+estrato int not null,
+estado_civil varchar(10) not null,
+email varchar(20) not null,
+)
+go
+create table web
+(
+id_web int not null primary key,
+nombre varchar(30) not null,
+hosting varchar(40) not null,
+dominio varchar(30) not null,
+fecha datetime not null,
+hora time not null,
+descripcion varchar(40) not null
+)
+go
+create table servicio
+(
+id_servi int not null primary key,
+tipo varchar(30) not null
+)
+go
+create table Perfil
+(
+id_perfil int not null primary key,
+tipo varchar(30) not null,
+)
+go
+create table tipo_servicio
+(
+id_tposer int not null primary key,
+id_perfil int not null,
+id_servicio int
+)
+go
+create table productos
+(
+id_prod int not null primary key,
+nombre varchar(30) not null,
+cantidad int not null,
+descripcion varchar(30) not null
+)
+go
+create table tipo_producto
+(
+id_usuario int not null primary key,
+id_producto int not null
+)
