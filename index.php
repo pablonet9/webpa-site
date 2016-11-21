@@ -1,4 +1,3 @@
-<?php include( "incluidos/conexion.php");?><!DOCTYPE html>
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
